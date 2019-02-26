@@ -3,7 +3,7 @@
 ## how to use
 1) start vanilla arma   
 2) use "music-exporter.sqf"   
-3) copy the clipboard text into "sqf-export.js" and "node index.js"   
+3) copy the clipboard text into "sqf-export.js" and use "node index.js"   
 4) check the fox_music2sounds folder and pack it
 
 An array with all imported tracks can be accessed via   
