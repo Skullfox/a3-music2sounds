@@ -16,13 +16,14 @@
       if(_name == "")then{
         diag_log format["%1 skipped",_track];
       }else{
-        diag_log format["%1 - %2 - %3 - %4",_track,_name,_path,_duration];
-        _data pushBack [_track,_name,_path splitString "\" joinString "\\"  ,_duration];
+        diag_log format["%1 - %2 - %3 - %4",_track,_name,_path,floor _duration];
+        _v = _path splitString "\";
+        _data pushBack [_track,_name, _path splitString "\" joinString "\\" ,floor _duration];
       };
 
 
   } forEach _configs;
-  copyToClipboard str _data;
+  copyToClipboard  ("module.exports = " + str _data);
   hint "Copied to clipboard";
   diag_log "MUSIC EXPORT DUMP END";
 };
